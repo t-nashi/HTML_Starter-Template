@@ -1,0 +1,163 @@
+
+// 使い方
+// 基本的にはモバイルファーストの考えのもと、up形式（例：768px以上～）でstyleを上書きしていく
+
+// $breakpoint-width-ss: 340px;
+// $breakpoint-width-sg: 360px;
+// $breakpoint-width-sm: 576px;
+// $breakpoint-width-md: 768px;		// ↓ ここから検索窓・グローバルメニュー出現、続きを読む
+// $breakpoint-width-lg: 992px;
+// $breakpoint-width-xl: 1200px;		// ↓ ここから2カラム
+// $breakpoint-width-xxl: 1400px;		// ↓ 2カラム、幅大
+
+// @include mq-up(xxl) {}// 1400px以上（PC - 大大）
+// @include mq-down(xxl) {}// 1400px以下
+// @include mq-down(lg) {}// 992px以下
+// @include mq-down(md) {}// 768px以下
+// @include mq-down(sm) {}// 576px以下
+// @include mq-down(sg) {}// 360px以下
+
+// ==========================================================================
+// memo
+// ==========================================================================
+// sassの変数
+// メディアクエリ
+// $breakpoint-tablet: 980px;
+// $breakpoint-mobile: 640px;
+// $breakpoint-s: 340px;
+// $breakpoint-m: 768px;
+// $breakpoint-l: 1024px;
+// $breakpoint-x: 1200px;
+
+// 今まで使ってた設定
+// smaller than 3840（1920x2） … 1920pxディスプレイで全画面表示したとき用（一番大きな設定は style.css内が望ましい）
+// smaller than 1430 … 一番一般的な設定にする
+// smaller than 980 … iPad Mini Retinaの縦サイズが 768x1024 なのでこれに該当
+// smaller than 650 … タブレット ～ スマホ用
+// smaller than 480 … スマホ用
+// smaller than 359 … iPhone5sより一回り大きなGalaxyなんかのディスプレイ w360 に適応させるための設定
+
+// https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html
+
+// @mixin mq-max($break-point) {
+// 	@media screen and (max-width: $break-point) {
+// 		@content;
+// 	}
+// }
+
+// @mixin mq-min($break-point) {
+// 	@media screen and (min-width: $break-point) {
+// 		@content;
+// 	}
+// }
+
+// @mixin screen($break-point-min, $break-point-max) {
+// 	@media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+// 		@content;
+// 	}
+// }
+
+// 375x667（iPhone 8）
+// 768x1024（iPad - Portrait）
+// 992x1024（PC - 小）
+// 1200x1080（PC - 大）
+// 1400x1080（PC - 大大）
+
+// $ss: 340px;
+// $sg: 360px;
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// $xxl: 1400px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==========================================================================
+// memo
+// ==========================================================================
+// https://github.com/hiloki/flocss
+// https://blog.yuhiisk.com/archive/2018/05/07/responsive-css-architecture.html
+
+// 命名規則 - MindBEMding … BEMシステムのシンタックスである、Block、Element、Modifierに分類して構成される規則を採用します。
+// FLOCSSでは、オリジナルのBEMのシンタックスではなく、MindBEMding のアイデアを基本的にそのまま取り入れています。
+
+	// // Good
+	// .block {} // 親要素
+	// .block__element {} // 子要素
+	// .block--modifier {} // 親要素のバージョン違い
+	// .block__element--modifier {} // 子要素のバージョン違い
+
+	// // Bad
+	// .block {}
+	// .block .block__element {}
+	// .block .block--modifier {}
+	// .block .block__element--modifier {}
+
+
+// 接頭辞（プレフィックス）
+	// Layout - .l-*
+
+	// Objectのプレフィックス
+	// Objectレイヤーの中で分類されるモジュールに対し、役割を明確にするためにプレフィックスをつけることを推奨します。
+		// Component - .c-*
+		// Project - .p-*
+		// Utility - .u-*
+
+// c- 			 … Componentレイヤーのコンポーネントあることを示します
+// p- 			 … Projectレイヤーのコンポーネントであることを示します
+// u- 			 … Utilityレイヤーのコンポーネントであることを示します
+// js- 			 … JavaScriptのフックとして使用されるclassやIDであることを示します（CSSでスタイルは指定しない）
+// is-, has- 	 … 要素の表示の切り替えなどの状態の変化があることを示します
+// t- 			 … Themeレイヤーのコンポーネントであることを示します。
+// s- 			 … Scopeレイヤーのコンポーネントであることを示します。
+// qa-, t- 		 … QA/Testレイヤーのコンポーネントであることを示します。
+
+
+
+
+
+
+
+
+
+
+
+

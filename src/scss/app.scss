@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+// 「node_modules」から読み込み
+// @import '~node-reset-scss/scss/_reset';
+// @import '~bootstrap/scss/bootstrap';		// app.js内の記述・ファイル読み込みも必要
+// @import '_reset-css-remedy';
+
+// ==========================================================================
+// CSS設計=FLOCSS
+// ==========================================================================
+// Foundation： Reset.cssやNormalize.cssなどを用いたブラウザのデフォルトスタイルの初期化や、プロジェクトにおける基本的なスタイルを定義
+@import 'foundation/_reset';				// reset
+@import 'foundation/_variables';		// 変数
+@import 'foundation/_mixins';				// メディアクエリ用設定
+@import 'foundation/_base';					// ベース
+
+// Layout（l-*）： ページを構成するヘッダーやメインのコンテンツエリア、サイドバーやフッターといったプロジェクト共通のコンテナーブロックのスタイルを定義
+@import 'layout/*';
+
+// Object： OOCSSのコンセプトを元に、プロジェクトにおける繰り返されるビジュアルパターンをすべてObjectと定義
+// - Component（c-*）： 再利用できるパターンとして、小さな単位のモジュールを定義
+@import 'object/component/*';
+
+// - Project（p-*）： プロジェクト固有のパターンであり、いくつかのComponentと、それに該当しない要素によって構成されるものを定義
+@import 'object/project/*';
+
+// - Utility（u-*）： ComponentとProjectレイヤーのObjectのモディファイアで解決することが難しい・適切では無い、わずかなスタイルの調整のための便利クラスを定義
+@import 'object/utility/*';
+
+// @import '_debug';			// デバッグ時だけONにする
