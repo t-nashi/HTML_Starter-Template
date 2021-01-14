@@ -1,10 +1,19 @@
-
 .l-header {
-	background-color: $color-bg-header;
-	width: 100%;
-	height: 60px;
+	// background-color: $color-bg-header;
 
-	@include mq-up(md) {// 768px以上（iPad - Portrait）
-		height: 120px;
+	&__inner {
+		height: 100%;
+		@include mq-up(md) {// 768px以上（iPad - Portrait）
+			//
+		}
+		@include mq-up(xl) {// 1200px以上（PC - 大）
+			@include mx-auto();
+			width: $width-2column-whole-xl;
+			background-color: rgba(255, 255, 255, .5);
+		}
+		@include mq-up(xxl) {// 1400px以上（PC - 大大）
+			//
+		}
 	}
+
 }

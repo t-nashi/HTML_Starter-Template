@@ -1,0 +1,31 @@
+//
+// width - contents
+//
+$width-2column-whole-xl: 1200px;
+$width-2column-main-xl: 900px;
+$width-2column-aside-xl: $width-2column-whole-xl - $width-2column-main-xl;
+
+// 375x667（iPhone 8）
+// 768x1024（iPad - Portrait）
+// 992x1024（PC - 小）
+// 1200x1080（PC - 大）
+// 1400x1080（PC - 大大）
+
+// width - breakpoint
+$breakpoint-width-ss: 340px;
+$breakpoint-width-sg: 360px;
+$breakpoint-width-sm: 576px;
+$breakpoint-width-md: 768px;		// ↓ ここから検索窓・グローバルメニュー出現、続きを読む
+$breakpoint-width-lg: 992px;
+$breakpoint-width-xl: 1200px;		// ↓ ここから2カラム
+$breakpoint-width-xxl: 1400px;		// ↓ 2カラム、幅大
+
+$breakpoint-width-ss-down: ($breakpoint-width-ss - 1);
+$breakpoint-width-sg-down: ($breakpoint-width-sg - 1);
+$breakpoint-width-sm-down: ($breakpoint-width-sm - 1);
+$breakpoint-width-md-down: ($breakpoint-width-md - 1);
+$breakpoint-width-lg-down: ($breakpoint-width-lg - 1);
+$breakpoint-width-xl-down: ($breakpoint-width-xl - 1);
+$breakpoint-width-xxl-down: ($breakpoint-width-xxl - 1);
+
+$header-md-height: 60px;

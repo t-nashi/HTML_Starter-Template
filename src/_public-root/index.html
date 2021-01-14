@@ -13,6 +13,8 @@
 <meta name="author" content="xxxxx">
 <meta name="copyright" content="Copyright xxxxx 20xx. All Rights Reserved.">
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
 <!-- icon -->
 <!-- 16x16 or 32x32 -->
 <!-- <link rel="shortcut icon" href="favicon.ico"> -->
@@ -33,77 +35,84 @@
 </style>
 </head>
 <body>
-	<header class="l-header">
-		<div class="c-header">
-			<div class="c-header__inner">
-				<div class="c-header__site-name">
-					<p>[ header ]</p>
-				</div>
-			</div>
-		</div>
-	</header>
+  <header class="l-header">
+    <div class="l-header__inner">
+      <p>[ header ]</p>
+    </div>
+  </header>
+  <!-- /.l-header -->
 
-	<div class="l-container">
-		<div class="l-container__inner">
+  <div class="l-container">
+    <div class="l-container__inner">
 
-			<main class="l-main index">
-				<p>[ main ]</p>
-				<section>
-					<p class="ico_heart">background-image: urlでicon表示</p>
-					<ul class="l-list-img">
-						<li class="sample-img"><div><!--//css-backgroundで画像表示--></div></li>
-						<li><img class="img-min" src="images/sample.png" alt=""></li>
-						<li><img class="img-min" src="images/sample.gif" alt=""></li>
-					</ul>
-				</section>
-				<!-- 
-				<article class="post">
-					<header>
-						<h1 class="post-title">
-							<a href="/">記事タイトル</a>
-						</h1>
-					</header>
-					<section>
-						<figure class="post-image">
-							<a href="/">
-								<img width="300" height="168" src="https://placehold.jp/300x168.png" class="attachment-post-thumbnail" alt="">
-							</a>
-						</figure>
-						<section>
-							<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<p>
-						</section>
-					</section>
-				</article>
-				-->
-				<!-- /.post -->
-			</main>
-			<!-- /.l-main -->
+      <main class="l-main">
+        <div class="l-main__inner">
+          <p>[ main ]</p>
+          <p><a href="#">リンクテキスト</a></p>
+          <img class="w-100" src="https://images.unsplash.com/photo-1491466424936-e304919aada7" alt="">
+        </div>
+      </main>
+      <!-- /.l-main -->
 
-			<aside class="l-sidebar">
-				<div class="c-sidebar">
-					<section>
-						<div>
-							<p>[ aside ]</p>
-						</div>
-					</section>
-				</div>
-				<!-- /.c-sidebar -->
-			</aside>
+      <aside class="l-aside">
+        <div class="l-aside__inner">
+          <p>[ aside ]</p>
+        </div>
+      </aside>
+      <!-- /.l-aside -->
 
-		</div>
-		<!-- /.l-container__inner -->
-	</div>
+    </div>
+  </div>
+  <!-- /.l-container -->
 
-	<footer class="l-footer">
-		<div class="c-footer">
-			<div class="c-header__inner">
-				<p>[ footer ]</p>
-			</div>
-		</div>
-		<!-- /.c-footer -->
-	</footer>
+  <footer class="l-footer">
+    <div class="l-footer__inner">
+      <p>[ footer ]</p>
+    </div>
+  </footer>
+  <!-- /.l-footer -->
 
-<!-- jQueryもバンドルされたファイル -->
-<script src="js/bundle.js"></script>
+
+
+
+
+
+
+  <div id="app">
+    <div id="tabs" class="container">
+      <ul class="tab">
+          <li @click="activetab=1" @keyup.enter="activetab=1" :class="[activetab===1 ? 'active' : '']" tabindex="0">タブ01</li>
+          <li @click="activetab=2" @keyup.enter="activetab=2" :class="[activetab===2 ? 'active' : '']" tabindex="0">タブ02</li>
+          <li @click="activetab=3" @keyup.enter="activetab=3" :class="[activetab===3 ? 'active' : '']" tabindex="0">タブ03</li>
+      </ul>
+      <div class="content-vue">
+        <div v-show="activetab===1" class="tabcontent">
+          コンテンツ01
+        </div>
+        <div v-show="activetab===2" class="tabcontent">
+          コンテンツ02
+        </div>
+        <div v-show="activetab===3" class="tabcontent">
+          コンテンツ03
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        activetab: 1
+      },
+    });
+  </script>
+
+
+
+
+
+  <!-- jQueryもバンドルされたファイル -->
+  <script src="js/bundle.js"></script>
 </body>
 </html>

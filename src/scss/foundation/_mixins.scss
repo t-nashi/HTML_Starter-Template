@@ -21,15 +21,42 @@ $breakpoint-down: (
 	'xxl': 'screen and (max-width: #{$breakpoint-width-xxl-down})',
 ) !default;
 
-// @mixinの定義
+// mixinの定義
+// --------------------------------------------------
+
+// width-breakpoint
 @mixin mq-up($breakpoint: md) {
 	@media #{map-get($breakpoint-up, $breakpoint)} {
 		@content;
 	}
 }
-
 @mixin mq-down($breakpoint: md) {
 	@media #{map-get($breakpoint-down, $breakpoint)} {
 		@content;
 	}
 }
+
+// テキストリンク
+@mixin link-colors() {
+  color: $color-text-link;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+		text-decoration: underline;
+    color: $color-text-hover;
+  }
+  &:visited {
+    color: $color-text-visited;
+  }
+}
+
+@mixin mx-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+

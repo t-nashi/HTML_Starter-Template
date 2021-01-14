@@ -1,5 +1,5 @@
 // set html5 elements to block
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -27,14 +27,40 @@ body {
   }
 }
 
+
+
+
+// // テキストリンク
+// @extend .link-colors;
+// .link-colors {
+//   color: $color-text-link;
+//   text-decoration: none;
+//   outline: none;
+//   &:hover {
+// 		text-decoration: underline;
+//     color: $color-text-hover;
+//   }
+//   &:visited {
+//     color: $color-text-visited;
+//   }
+// }
+
+
+// .mx-auto {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+
+.w-100 {
+  width: 100%;
+}
+
+
+
+
 a {
-  color: $color-text-link;
-  text-decoration: none;
-  outline: none;
-  &:hover {
-    text-decoration: underline;
-    color: $color-text-link-active;
-  }
+  @include link-colors();
 }
 
 a:hover img {

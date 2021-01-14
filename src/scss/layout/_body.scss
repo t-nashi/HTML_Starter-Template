@@ -1,0 +1,48 @@
+body {
+	width: 100vw;
+	height: 100vh;
+  display: grid;
+	grid-template-rows: .2fr 1fr .2fr;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"container"
+		"footer";
+	@include mq-up(xl) {// 1200px以上（PC - 大）
+		//
+	}
+	@include mq-up(xxl) {// 1400px以上（PC - 大大）
+		//
+	}
+	// grid-gap: 5px;  // 5pxの余白を設定
+}
+.l-header {
+  grid-area: header;
+}
+.l-container {
+  grid-area: container;
+	&__inner {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"main"
+			"aside";
+		@include mq-up(xl) {// 1200px以上（PC - 大）
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: $width-2column-main-xl $width-2column-aside-xl;
+			grid-template-areas:
+				"main aside";
+		}
+	}
+}
+.l-main {
+  grid-area: main;
+}
+.l-aside {
+  grid-area: aside;
+}
+.l-footer {
+  grid-area: footer;
+}

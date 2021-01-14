@@ -1,5 +1,5 @@
-.l-footer {
-	// background-color: $color-bg-footer;
+.l-aside {
+	// padding-bottom: 30px;
 
 	&__inner {
 		height: 100%;
@@ -7,9 +7,7 @@
 			//
 		}
 		@include mq-up(xl) {// 1200px以上（PC - 大）
-			@include mx-auto();
-			width: $width-2column-whole-xl;
-			background-color: rgba(255, 255, 255, .5);
+			//
 		}
 		@include mq-up(xxl) {// 1400px以上（PC - 大大）
 			//

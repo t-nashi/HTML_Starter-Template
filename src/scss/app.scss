@@ -10,7 +10,7 @@
 // ==========================================================================
 // Foundation： Reset.cssやNormalize.cssなどを用いたブラウザのデフォルトスタイルの初期化や、プロジェクトにおける基本的なスタイルを定義
 @import 'foundation/_reset';				// reset
-@import 'foundation/_variables';		// 変数
+@import 'foundation/_variables-*';	// 変数
 @import 'foundation/_mixins';				// メディアクエリ用設定
 @import 'foundation/_base';					// ベース
 
@@ -27,4 +27,4 @@
 // - Utility（u-*）： ComponentとProjectレイヤーのObjectのモディファイアで解決することが難しい・適切では無い、わずかなスタイルの調整のための便利クラスを定義
 @import 'object/utility/*';
 
-// @import '_debug';			// デバッグ時だけONにする
+@import '_debug';			// デバッグ時だけONにする

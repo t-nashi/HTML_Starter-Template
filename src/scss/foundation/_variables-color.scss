@@ -1,0 +1,98 @@
+// colors - theme
+$color-primary: #00A4C9;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 20%);
+$color-secondary: #E75A7F;
+$color-secondary-light: #ED87A2;
+$color-secondary-dark: darken($color-secondary, 30%);
+$color-black: #000000;
+$color-gray: #888888;
+$color-gray-light-1: lighten($color-gray, 10%);
+$color-gray-light-2: lighten($color-gray, 20%);
+$color-gray-dark-1: darken($color-gray, 10%);
+$color-gray-dark-2: darken($color-gray, 20%);
+$color-white: #FFFFFF;
+$color-warning: #FFC107;
+$color-danger: #DC3545;
+$color-success: #28A745;
+$color-info: #17A2B8;
+$color-text: #666666;
+$color-text-light: lighten($color-text, 20%);
+$color-text-dark: darken($color-text, 20%);
+$color-border: #DDDDDD;
+$color-border-light: lighten($color-border, 10%);
+$color-border-dark: darken($color-border, 20%);
+
+// colors - target
+$color-text-link: lighten($color-primary, 5%);
+$color-text-hover: lighten($color-primary-light, 15%);
+$color-text-visited: desaturate($color-primary-dark, 50%);
+
+$color-text-selection: #B8DDFF;
+$color-text-orange: #FF6920;
+$color-text-pink: #FF1E92;
+
+$color-text-copylight: #DDD;
+
+// headerのサイトタイトル
+$color-text-gray-1: #DDD;
+// headerのサイトサブタイトル
+$color-text-gray-2: #888;
+
+$color-text-gray-3: #AAA;
+
+// moreの背景
+$color-bg-more: #FBFBFB;
+$color-bg-more-active: #F0F0F0;
+
+// tag-cloudの背景
+$color-bg-tag-cloud: #FBFBFB;
+$color-bg-tag-cloud-active: #F0F0F0;
+
+$color-bg-box: #F6F6F6;
+
+$color-border-dark: #F0F0F0;
+$color-border-light: #DDD;
+
+$color-bg-wrapper: #EDEDED;
+$color-bg-header: #333;
+$color-bg-main-column: #FFF;
+$color-bg-side-column-top: #FFF;
+$color-bg-footer: #333;
+
+$color-transparent: rgba(0,0,0,0);
+
+$color-bg-debug: rgba(255,0,0,0.3);
+
+//
+// colors - sns
+//
+$color-bg-twitter: #33CCFF;
+$color-bg-twitter-active: #13ACDF;
+$color-bg-facebook: #3B5998;
+$color-bg-facebook-active: #1B3978;
+$color-bg-gplus: #C63D2D;
+$color-bg-gplus-active: #A61D0D;
+$color-bg-vkontakte: #2C6EBD;
+$color-bg-vkontakte-active: #0C4E9D;
+$color-bg-pocket: #EE4056;
+$color-bg-pocket-active: #CE2036;
+$color-bg-line: #00B900;
+$color-bg-line-active: #009A00;
+
+// 色定義
+$colors: (
+	1: #1abc9c,
+	2: #2ecc71,
+	3: #3498db,
+	4: #9b59b6,
+	5: #34495e,
+	6: #f1c40f,
+	7: #e67e22,
+	8: #e74c3c,
+	9: #ecf0f1,
+	10: #95a5a6,
+);
+@function colors($key) {
+	@return map-get($colors, $key);
+}
